@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.aimassistant.ui.DataInputWindowController"
+      spacing="15" alignment="CENTER"
+      style="-fx-padding: 20;">
+      
+    <GridPane hgap="10" vgap="15">
+        <Label text="Target Distance (m):" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="tfTargetDistance" promptText="e.g. 500" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Wind Speed (m/s):" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="tfWindSpeed" promptText="e.g. 3.5" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Wind Direction (0-360):" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="tfWindDirection" promptText="e.g. 90" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Bullet Weight (grain):" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="tfBulletWeight" promptText="e.g. 168" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Ballistic Coefficient (BC):" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="tfBC" promptText="e.g. 0.450" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Muzzle Velocity (m/s):" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="tfMuzzleVelocity" promptText="e.g. 800" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <Label text="Zeroing Distance (m):" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <TextField fx:id="tfZeroingDistance" promptText="e.g. 100" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    </GridPane>
+
+    <Button text="Calculate" onAction="#onCalculateClicked" 
+            style="-fx-font-size: 14px; -fx-padding: 6 20;" 
+            maxWidth="Infinity"/>
+</VBox>

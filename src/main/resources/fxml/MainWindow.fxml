@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.aimassistant.ui.MainWindowController"
+            style="-fx-background-color: #f4f4f4;">
+            
+    <!-- Top toolbar / Button area -->
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Input Target Data" onAction="#openInputWindow" 
+                    style="-fx-font-size: 14px; -fx-padding: 8 16;"/>
+        </VBox>
+    </top>
+
+    <!-- Center Holo Canvas area -->
+    <center>
+        <Canvas fx:id="reticleCanvas" width="700" height="700" />
+    </center>
+    
+</BorderPane>
